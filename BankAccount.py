@@ -8,3 +8,11 @@ class BankAccount:
     def print_statement(self):
         print(f"Hello {self.full_name}! Your balance for account {self.account_number} is: {self.balance}. Don't forget our Routing Number: {self.routing_number}, in order to deposit or withdraw funds in the future.")
 
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+
+    def withdraw(self, amount):
+        self.balance -= amount
+        return self.balance
+        
