@@ -15,4 +15,7 @@ class BankAccount:
     def withdraw(self, amount):
         self.balance -= amount
         return self.balance
-        
+
+    def get_balance(self, balance):
+        print(self.balance)
+        return self.balance
