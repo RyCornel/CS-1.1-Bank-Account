@@ -1,12 +1,14 @@
 from random import randint
 
 class BankAccount:
+    routing_number = 123456789
+
     def __init__(self, full_name):
         self.full_name = full_name
         self.account_number = randint(1000000, 9999999)
-        self.routing_number = 123456789
         self.balance = 0.00
         self.display_number = ""
+        
 
     def deposit(self, amount):
         self.balance += amount
@@ -37,13 +39,14 @@ class BankAccount:
         acct_num = range(len(str(self.account_number)))
             
         for i in acct_num:
-            if i <= 4:
+            if i <= 3:
                 self.display_number += "*"
             else:
                 self.display_number += str(self.account_number)[i]
 
     def print_statement(self):
-        print(f"Hello {self.full_name}! Your balance for account number: {self.account_number}, is: ${self.balance}. Don't forget our Routing Number: {self.routing_number}, in order to deposit or withdraw funds in the future.")
+        self.display_num()
+        print(f"Hello {self.full_name}! Your balance for account number: {self.display_number}, is: ${self.balance}. Don't forget our Routing Number: {self.routing_number}, in order to deposit or withdraw funds in the future.")
     
 
 
