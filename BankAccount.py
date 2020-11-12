@@ -43,18 +43,40 @@ class BankAccount:
                 self.display_number += str(self.account_number)[i]
 
     def print_statement(self):
-        print(f"Hello {self.full_name}! Your balance for account '{self.account_number}' is: ${self.balance}. Don't forget our Routing Number: {self.routing_number}, in order to deposit or withdraw funds in the future.")
+        print(f"Hello {self.full_name}! Your balance for account number: {self.account_number}, is: ${self.balance}. Don't forget our Routing Number: {self.routing_number}, in order to deposit or withdraw funds in the future.")
     
 
 
 ryan = BankAccount("Ryan Cornel")
 ryan.account_number
 print(ryan.account_number)
-ryan.routing_number
-ryan.get_balance()
+ryan.get_balance
+print(ryan.get_balance)
 ryan.deposit(1000)
+print(ryan.get_balance)
 ryan.withdraw(150)
 print(ryan.get_balance)
-ryan.add_interest
-print(ryan.get_balance)
 print(ryan.print_statement())
+
+anna = BankAccount("Anna Chico")
+anna.account_number
+print(anna.account_number)
+anna.get_balance
+print(anna.get_balance)
+anna.deposit(70000)
+print(anna.get_balance)
+anna.withdraw(15000)
+print(anna.get_balance)
+print(anna.print_statement())
+
+
+ms = BankAccount("Make School")
+ms.account_number
+print(ms.account_number)
+ms.get_balance
+print(ms.get_balance)
+ms.deposit(200000000)
+print(ms.get_balance)
+ms.withdraw(20000000)
+print(ms.get_balance)
+print(ms.print_statement())
